@@ -1,0 +1,60 @@
+<PISI>
+    <Source>
+        <Name>db4.8</Name>
+        <Packager>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua.strobl@outlook.com</Email>
+        </Packager>
+        <License>GPL-3.0</License>
+        <Summary xml:lang="en">Berkeley DB embedded database system 4.8</Summary>
+        <Description xml:lang="en">Berkeley DB embedded database system 4.8
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>db4.8</Name>
+        <Summary xml:lang="en">Berkeley DB embedded database system 4.8</Summary>
+        <Description xml:lang="en">Berkeley DB embedded database system 4.8
+</Description>
+        <PartOf>database</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>db4.8-devel</Name>
+        <Summary xml:lang="en">Development files for db4.8</Summary>
+        <Description xml:lang="en">Berkeley DB embedded database system 4.8
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="current">db4.8</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>db4.8-docs</Name>
+        <Summary xml:lang="en">Documentation for db4.8</Summary>
+        <Description xml:lang="en">Berkeley DB embedded database system 4.8
+</Description>
+        <PartOf>programming.docs</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="current">db4.8</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-09-19</Date>
+            <Version>4.8.30</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua.strobl@outlook.com</Email>
+        </Update>
+    </History>
+</PISI>

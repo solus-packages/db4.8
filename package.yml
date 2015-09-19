@@ -1,0 +1,35 @@
+name       : db4.8
+version    : 4.8.30
+release    : 1
+source     :
+    - http://download.oracle.com/berkeley-db/db-4.8.30.tar.gz : e0491a07cdb21fb9aa82773bbbedaeb7639cbd0e7f96147ab46141e0045db72a
+license    : GPL-3.0
+summary    : Berkeley DB embedded database system 4.8
+description: |
+    Berkeley DB embedded database system 4.8
+builddeps  :
+libsplit : no
+patterns :
+    - docs : [ /usr/share/doc ]
+setup      : |
+    cd build_unix
+    ../dist/%configure --enable-compat185 --enable-cxx --enable-shared --disable-static 
+    %make
+install    : |
+    cd build_unix
+    %make_install includedir="/usr/include/db4.8"
+    # Shoutout to Arch for making sure we don't bork db5
+    # Remove conflicting symlinks
+    rm -f $installdir/%libdir%/libdb.so
+    rm -f $installdir/%libdir%/libdb_cxx.so
+    rm -f $installdir/%libdir%/libdb-4.so
+    rm -f $installdir/%libdir%/libdb_cxx-4.so
+    # Rename db4.8 binaries
+    cd $installdir/usr/bin/
+    for i in *; do
+        mv $i db4.8_${i/db_/}
+    done
+    # Move docs
+    mkdir -p $installdir/usr/share/doc/db4.8/
+    mv $installdir/usr/docs/* $installdir/usr/share/doc/db4.8/
+    rmdir $installdir/usr/docs
