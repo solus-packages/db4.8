@@ -1,17 +1,18 @@
 name       : db4.8
 version    : 4.8.30
-release    : 1
+release    : 2
 source     :
     - http://download.oracle.com/berkeley-db/db-4.8.30.tar.gz : e0491a07cdb21fb9aa82773bbbedaeb7639cbd0e7f96147ab46141e0045db72a
 license    : GPL-3.0
+component  : database
 summary    : Berkeley DB embedded database system 4.8
 description: |
     Berkeley DB embedded database system 4.8
-builddeps  :
-libsplit : no
-patterns :
+libsplit   : no
+patterns   :
     - docs : [ /usr/share/doc ]
 setup      : |
+    %patch -p1 < $pkgfiles/security/cve-2017-10140.patch
     cd build_unix
     ../dist/%configure --enable-compat185 --enable-cxx --enable-shared --disable-static 
     %make
