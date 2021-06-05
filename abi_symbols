@@ -134,6 +134,7 @@ libdb-4.8.so:__bamc_dup
 libdb-4.8.so:__bamc_init
 libdb-4.8.so:__bamc_refresh
 libdb-4.8.so:__bamc_rget
+libdb-4.8.so:__bss_start
 libdb-4.8.so:__cdsgroup_begin
 libdb-4.8.so:__config_split
 libdb-4.8.so:__crdel_init_recover
@@ -260,6 +261,7 @@ libdb-4.8.so:__db_get_pp
 libdb-4.8.so:__db_get_seq_flags_fn
 libdb-4.8.so:__db_getlong
 libdb-4.8.so:__db_getulong
+libdb-4.8.so:__db_global_values
 libdb-4.8.so:__db_goff
 libdb-4.8.so:__db_hashinit
 libdb-4.8.so:__db_hcreate
@@ -1297,6 +1299,7 @@ libdb-4.8.so:__repmgr_free_cond
 libdb-4.8.so:__repmgr_get_ack_policy
 libdb-4.8.so:__repmgr_get_nsites
 libdb-4.8.so:__repmgr_getaddr
+libdb-4.8.so:__repmgr_guesstimated_max
 libdb-4.8.so:__repmgr_handle_event
 libdb-4.8.so:__repmgr_handshake_marshal
 libdb-4.8.so:__repmgr_handshake_unmarshal
@@ -1435,6 +1438,10 @@ libdb-4.8.so:__txn_stat_print_pp
 libdb-4.8.so:__txn_updateckp
 libdb-4.8.so:__txn_xa_regop_42_read
 libdb-4.8.so:__ua_memcpy
+libdb-4.8.so:_edata
+libdb-4.8.so:_end
+libdb-4.8.so:_fini
+libdb-4.8.so:_init
 libdb-4.8.so:db_create
 libdb-4.8.so:db_env_create
 libdb-4.8.so:db_env_set_func_close
@@ -2106,6 +2113,7 @@ libdb_cxx-4.8.so:__bamc_dup
 libdb_cxx-4.8.so:__bamc_init
 libdb_cxx-4.8.so:__bamc_refresh
 libdb_cxx-4.8.so:__bamc_rget
+libdb_cxx-4.8.so:__bss_start
 libdb_cxx-4.8.so:__cdsgroup_begin
 libdb_cxx-4.8.so:__config_split
 libdb_cxx-4.8.so:__crdel_init_recover
@@ -2232,6 +2240,7 @@ libdb_cxx-4.8.so:__db_get_pp
 libdb_cxx-4.8.so:__db_get_seq_flags_fn
 libdb_cxx-4.8.so:__db_getlong
 libdb_cxx-4.8.so:__db_getulong
+libdb_cxx-4.8.so:__db_global_values
 libdb_cxx-4.8.so:__db_goff
 libdb_cxx-4.8.so:__db_hashinit
 libdb_cxx-4.8.so:__db_hcreate
@@ -3269,6 +3278,7 @@ libdb_cxx-4.8.so:__repmgr_free_cond
 libdb_cxx-4.8.so:__repmgr_get_ack_policy
 libdb_cxx-4.8.so:__repmgr_get_nsites
 libdb_cxx-4.8.so:__repmgr_getaddr
+libdb_cxx-4.8.so:__repmgr_guesstimated_max
 libdb_cxx-4.8.so:__repmgr_handle_event
 libdb_cxx-4.8.so:__repmgr_handshake_marshal
 libdb_cxx-4.8.so:__repmgr_handshake_unmarshal
@@ -3420,8 +3430,12 @@ libdb_cxx-4.8.so:_db_dup_compare_intercept_c
 libdb_cxx-4.8.so:_db_feedback_intercept_c
 libdb_cxx-4.8.so:_db_h_compare_intercept_c
 libdb_cxx-4.8.so:_db_h_hash_intercept_c
+libdb_cxx-4.8.so:_edata
+libdb_cxx-4.8.so:_end
 libdb_cxx-4.8.so:_event_func_intercept_c
 libdb_cxx-4.8.so:_feedback_intercept_c
+libdb_cxx-4.8.so:_fini
+libdb_cxx-4.8.so:_init
 libdb_cxx-4.8.so:_isalive_intercept_c
 libdb_cxx-4.8.so:_paniccall_intercept_c
 libdb_cxx-4.8.so:_rep_send_intercept_c
